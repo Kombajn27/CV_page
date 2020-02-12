@@ -1,159 +1,330 @@
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Ariel Biernacki resume</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ariel Biernacki resume</title>
-  <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <header>
-    <div class="header_cnt">
-      <nav>
-        <div class="hamburger">
-          <input id="hamburger" type="checkbox">
-          <label for="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </label>
-        </div>
-        <div class="main_nav_cnt">
-          <ul class="main_nav">
-            <li class="main_nav_el">Home</li>
-            <li class="main_nav_el">About me</li>
-            <li class="main_nav_el">Portfolio</li>
-            <li class="main_nav_el">Contact</li>
+  <body>
+    <header id="home" name="home">
+      <div class="header_cnt">
+        <nav>
+          <div class="main_nav_cnt">
+            <ul class="main_nav">
+              <li class="main_nav_el"><a class="main_nav_link" href="#home">Home</a></li>
+              <li class="main_nav_el"><a class="main_nav_link" href="#portfolio">Portfolio</a></li>
+              <li class="main_nav_el"><a class="main_nav_link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <section class="welcome">
+          <div class="photos_elements">
+            <div class="scene">
+              <div class="cube">
+                <div class="cube_face cube_face_front"></div>
+                <div class="cube_face cube_face_left"></div>
+                <div class="cube_face cube_face_back"></div>
+                <div class="cube_face cube_face_right"></div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="cube_face cube_face_front"></div>
+                <div class="cube_face cube_face_left"></div>
+                <div class="cube_face cube_face_back"></div>
+                <div class="cube_face cube_face_right"></div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="cube_face cube_face_front"></div>
+                <div class="cube_face cube_face_left"></div>
+                <div class="cube_face cube_face_back"></div>
+                <div class="cube_face cube_face_right"></div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="cube_face cube_face_front"></div>
+                <div class="cube_face cube_face_left"></div>
+                <div class="cube_face cube_face_back"></div>
+                <div class="cube_face cube_face_right"></div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="cube_face cube_face_front"></div>
+                <div class="cube_face cube_face_left"></div>
+                <div class="cube_face cube_face_back"></div>
+                <div class="cube_face cube_face_right"></div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="cube_face cube_face_front"></div>
+                <div class="cube_face cube_face_left"></div>
+                <div class="cube_face cube_face_back"></div>
+                <div class="cube_face cube_face_right"></div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="cube_face cube_face_front"></div>
+                <div class="cube_face cube_face_left"></div>
+                <div class="cube_face cube_face_back"></div>
+                <div class="cube_face cube_face_right"></div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="cube_face cube_face_front"></div>
+                <div class="cube_face cube_face_left"></div>
+                <div class="cube_face cube_face_back"></div>
+                <div class="cube_face cube_face_right"></div>
+              </div>
+            </div>
+            <div class="scene">
+              <div class="cube">
+                <div class="cube_face cube_face_front"></div>
+                <div class="cube_face cube_face_left"></div>
+                <div class="cube_face cube_face_back"></div>
+                <div class="cube_face cube_face_right"></div>
+              </div>
+            </div>
+          </div>
+          <div class="welcome_info">
+            <h2>Hi! My name is Ariel Biernacki</h2>
+            <div class="welcome_info_details">
+              <h3 class="info_changeable">
+                I am trying my best to keep up with the code ;)
+              </h3>
+              <h3 class="info_changeable invisible">
+                I have a quite good knowledge of HTML and CSS. In emergency
+                cases I know how to find solution.
+              </h3>
+              <h3 class="info_changeable invisible">
+                JS - this is where the magic happens. Language with almost
+                limitless possibilities and countless frameworks, so from my
+                point of view - a lot of work ahead.
+              </h3>
+              <h3 class="info_changeable invisible" data-last="last">
+                I am at the beginning of my React and Redux journey, but already
+                managed to do few projects with them.
+              </h3>
+            </div>
+          </div>
+        </section>
+      </div>
+    </header>
+    <section class="portfolio" id="portfolio" name="portfolio">
+      <div class="portfolio_cnt">
+        <div class="portfolio_heading">
+          <p>Main technology:</p>
+          <ul class="portfolio_types">
+            <li class="portfolio_type type_active" data-type="all">All</li>
+            <li class="portfolio_type" data-type="html">HTML/CSS</li>
+            <li class="portfolio_type" data-type="js">JS</li>
+            <li class="portfolio_type" data-type="react">React/Redux</li>
+            <li class="portfolio_type" data-type="backend">Backend</li>
           </ul>
         </div>
-      </nav>
-      <section class="welcome">
-        <div class="photos_elements">
-          <div class="scene">
-            <div class="cube">
-              <div class="cube_face cube_face_front"></div>
-              <div class="cube_face cube_face_left"></div>
-              <div class="cube_face cube_face_back"></div>
-              <div class="cube_face cube_face_right"></div>
+        <div class="portfolio_projects">
+          <div class="portfolio_project active" data-size="large" data-display="false" data-type="js">
+            <a href="https://kombajn27.github.io/gallery_generator/" target="_blank">
+              <img src="/img/project1.png" alt="gallery generator plugin" />
+            </a>
+            <div class="details_desc">
+              <p>
+                Gallery creating plugin. You can choose between slider, accordion, tab gallery and 3D gallery.
+              </p>
+              <a href="https://github.com/Kombajn27/gallery_generator" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
-          <div class="scene">
-            <div class="cube">
-              <div class="cube_face cube_face_front"></div>
-              <div class="cube_face cube_face_left"></div>
-              <div class="cube_face cube_face_back"></div>
-              <div class="cube_face cube_face_right"></div>
+          <div class="portfolio_project active" data-size="large" data-display="false" data-type="backend">
+            <a href="https://bookstore-seven.herokuapp.com/" target="_blank">
+              <img src="/img/project12.png" alt="Sudoku game view" />
+            </a>
+            <div class="details_desc">
+              <p>
+                Book rating app created during CodersCamp 2019 (group project).
+              </p>
+              <a href="https://github.com/Kombajn27/BookStore" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
-          <div class="scene">
-            <div class="cube">
-              <div class="cube_face cube_face_front"></div>
-              <div class="cube_face cube_face_left"></div>
-              <div class="cube_face cube_face_back"></div>
-              <div class="cube_face cube_face_right"></div>
+          <div class="portfolio_project active" data-size="long" data-display="false" data-type="html">
+            <a href="https://kombajn27.github.io/portfolio-2/" target="_blank">
+              <img src="/img/project2.png" alt="RWD landing page" />
+            </a>
+            <div class="details_desc">
+              <p>
+                RWD landing page project based on ready to use template.
+              </p>
+              <a href="https://github.com/Kombajn27/portfolio-2" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
-          <div class="scene">
-            <div class="cube">
-              <div class="cube_face cube_face_front"></div>
-              <div class="cube_face cube_face_left"></div>
-              <div class="cube_face cube_face_back"></div>
-              <div class="cube_face cube_face_right"></div>
+          <div class="portfolio_project active" data-size="long" data-display="false" data-type="html">
+            <a href="https://kombajn27.github.io/HTML-resume-template/" target="_blank">
+              <img src="/img/project3.png" alt="Template of resume website" />
+            </a>
+            <div class="details_desc">
+              <p>
+                HTML resume template made without JS usage.
+              </p>
+              <a href="https://github.com/Kombajn27/HTML-resume-template" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
-          <div class="scene">
-            <div class="cube">
-              <div class="cube_face cube_face_front"></div>
-              <div class="cube_face cube_face_left"></div>
-              <div class="cube_face cube_face_back"></div>
-              <div class="cube_face cube_face_right"></div>
+          <div class="portfolio_project active" data-size="medium" data-display="false" data-type="react_backend">
+            <a href="https://thinktree-e-shop.herokuapp.com/" target="_blank">
+              <img src="/img/project4.png" alt="E-commerce shop app" />
+            </a>
+            <div class="details_desc">
+              <p>
+                E-commerce shop created with MERN stack usage, JWT authorization included.
+              </p>
+              <a href="https://github.com/Kombajn27/OnlineShop" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
-          <div class="scene">
-            <div class="cube">
-              <div class="cube_face cube_face_front"></div>
-              <div class="cube_face cube_face_left"></div>
-              <div class="cube_face cube_face_back"></div>
-              <div class="cube_face cube_face_right"></div>
+          <div class="portfolio_project active" data-size="medium" data-display="false" data-type="js">
+            <a href="https://kombajn27.github.io/Trusiaczek-rush-game/" target="_blank">
+              <img src="/img/project5.png" alt="Welcome page view of Trusiaczek rush game" />
+            </a>
+            <div class="details_desc">
+              <p>
+                JavaScript game based on Canvas usage.
+              </p>
+              <a href="https://github.com/Kombajn27/Trusiaczek-rush-game" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
-          <div class="scene">
-            <div class="cube">
-              <div class="cube_face cube_face_front"></div>
-              <div class="cube_face cube_face_left"></div>
-              <div class="cube_face cube_face_back"></div>
-              <div class="cube_face cube_face_right"></div>
+          <div class="portfolio_project active" data-size="long" data-display="false" data-type="html">
+            <a href="https://kombajn27.github.io/portfolio-1/" target="_blank">
+              <img src="/img/project6.png" alt="Landing page main view" />
+            </a>
+            <div class="details_desc">
+              <p>
+                Simple landing page with SCSS and Bootstrap utilization.
+              </p>
+              <a href="https://github.com/Kombajn27/portfolio-1" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
-          <div class="scene">
-            <div class="cube">
-              <div class="cube_face cube_face_front"></div>
-              <div class="cube_face cube_face_left"></div>
-              <div class="cube_face cube_face_back"></div>
-              <div class="cube_face cube_face_right"></div>
+          <div class="portfolio_project active" data-size="small" data-display="false" data-type="js">
+            <a href="https://kombajn27.github.io/rock-paper-scissors/" target="_blank">
+              <img src="/img/project7.png" alt="Rock, paper, scissors game view" />
+            </a>
+            <div class="details_desc">
+              <p>
+                Rock, paper, scissors JavaScript game.
+              </p>
+              <a href="https://github.com/Kombajn27/rock-paper-scissors" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
-          <div class="scene">
-            <div class="cube">
-              <div class="cube_face cube_face_front"></div>
-              <div class="cube_face cube_face_left"></div>
-              <div class="cube_face cube_face_back"></div>
-              <div class="cube_face cube_face_right"></div>
+          <div class="portfolio_project active" data-size="long" data-display="false" data-type="html">
+            <a href="https://kombajn27.github.io/portfolio-3/" target="_blank">
+              <img src="/img/project8.png" alt="Rock, paper, scissors game view" />
+            </a>
+            <div class="details_desc">
+              <p>
+                One of my first landing pages made for RWD practise.
+              </p>
+              <a href="https://github.com/Kombajn27/portfolio-3" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio_project active" data-size="medium" data-display="false" data-type="react">
+            <a href="https://still-anchorage-69141.herokuapp.com/" target="_blank">
+              <img src="/img/project10.png" alt="Film rating app view" />
+            </a>
+            <div class="details_desc">
+              <p>
+                Simple film rating React app withoud connection to database.
+              </p>
+              <a href="https://github.com/Kombajn27/FilmList_React" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio_project active" data-size="small" data-display="false" data-type="js">
+            <a href="https://kombajn27.github.io/kanban-sample/" target="_blank">
+              <img src="/img/project11.png" alt="Sudoku game view" />
+            </a>
+            <div class="details_desc">
+              <p>
+                Simple Kanban board made in JavaScript (without database).
+              </p>
+              <a href="https://github.com/Kombajn27/kanban-sample" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio_project active" data-size="medium" data-display="false" data-type="js_backend">
+            <a href="https://kombajn27.github.io/AJAX-country-finder/" target="_blank">
+              <img src="/img/project13.png" alt="Sudoku game view" />
+            </a>
+            <div class="details_desc">
+              <p>
+                Practice of data fetching from external source by means of AJAX. 
+              </p>
+              <a href="https://github.com/Kombajn27/AJAX-country-finder" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio_project active" data-size="small" data-display="false" data-type="react">
+            <a href="https://pacific-stream-36228.herokuapp.com/" target="_blank">
+              <img src="/img/project9.png" alt="Sudoku game view" />
+            </a>
+            <div class="details_desc">
+              <p>
+                React based sudoku game with external library usage.
+              </p>
+              <a href="https://github.com/Kombajn27/sudoku-game" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+          <div class="portfolio_project active" data-size="small" data-display="false" data-type="react">
+            <a href="https://kombajn27.github.io/github_user_finder/" target="_blank">
+              <img src="/img/project14.png" alt="Github user finder app main view" />
+            </a>
+            <div class="details_desc">
+              <p>
+                Github user finder.
+              </p>
+              <a href="https://github.com/Kombajn27/github_user_finder" target="_blank">
+                <i class="fa fa-external-link-square" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
         </div>
-        <div class="welcome_info">
-          <h2>Hi! My name is Ariel Biernacki</h2>
-          <div class="welcome_info_details">
-            <h3 class="info_changeable">I am trying my best to keep up with the code ;)
-            </h3>
-            <h3 class="info_changeable invisible">I have a quite good knowledge of HTML and CSS. In emergency cases I
-              know how to find solution.
-            </h3>
-            <h3 class="info_changeable invisible">JS - this is where the magic happens. Language with almost limitless
-              possibilities and countless frameworks, so from my point of view - a lot of work ahead.
-            </h3>
-            <h3 class="info_changeable invisible" data-last="last">I am at the beginning of my React and Redux journey,
-              but already managed to do few projects with them.
-            </h3>
-          </div>
-        </div>
-      </section>
-    </div>
-  </header>
-  <section class="portfolio">
-    <div class="portfolio_cnt">
-      <div class="portfolio_heading">
-        <p>Main technology:</p>
-        <ul class="portfolio_types">
-          <li class="portfolio_type" data-tyle="all">All</li>
-          <li class="portfolio_type" data-type="html">HTML & CSS</li>
-          <li class="portfolio_type" data-type="js">JS</li>
-          <li class="portfolio_type" data-type="react">React/Redux</li>
-          <li class="portfolio_type" data-type="backend">Backend</li>
-        </ul>
       </div>
-      <div class="portfolio_projects">
-        <div class="portfolio_project html">HTML</div>
-        <div class="portfolio_project js">JS</div>
-        <div class="portfolio_project js">JS</div>
-        <div class="portfolio_project react">REACT</div>
-        <div class="portfolio_project backend">BACKEND</div>
-        <div class="portfolio_project react">REACT</div>
-        <div class="portfolio_project js">JS</div>
-        <div class="portfolio_project html">HTML</div>
-        <div class="portfolio_project html">HTML</div>
-        <div class="portfolio_project js">JS</div>
-        <div class="portfolio_project backend">BACKEND</div>
-        <div class="portfolio_project backend">BACKEND</div>
-        <div class="portfolio_project js">JS</div>
-        <div class="portfolio_project html">HTML</div>
-        <div class="portfolio_project react">REACT</div>
-      </div>
-    </div>
-  </section>
-</body>
+    </section>
+    <section class="contact" id="contact" name="contact">
 
+    </section>
+  </body>
 </html>

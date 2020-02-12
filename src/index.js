@@ -1,7 +1,7 @@
 import './css/style.css';
 import './js/navigation';
 import './js/welcome';
-import './js/wportfolio';
+import './js/portfolio';
 
 function importAll(r) {
   return r.keys().map(r);

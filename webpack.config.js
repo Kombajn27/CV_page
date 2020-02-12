@@ -11,8 +11,7 @@ module.exports = {
     filename: 'bundle.js',
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.m?js$/,
         exclude: /node_modules/,
         use: {
@@ -23,9 +22,8 @@ module.exports = {
         },
       },
       {
-        test:/\.css$/,
-        use: [
-          {
+        test: /\.css$/,
+        use: [{
             loader: MiniCssExtractPlugin.loader,
             options: {
               publicPath: '../'
@@ -41,16 +39,14 @@ module.exports = {
       },
       {
         test: /\.jpe?g$|\.ico$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'img/',
-              publicPath: 'img/'
-            }
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'img/',
+            publicPath: 'img/'
           }
-        ]
+        }]
       }
     ]
   },

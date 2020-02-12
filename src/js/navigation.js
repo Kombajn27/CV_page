@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // NAVIGATION ANIMATIONS
-  const navElements = document.querySelectorAll('.main_nav_el');
+  const navElements = document.querySelectorAll('.main_nav_link');
 
   // Navigation animation function
   function animateNav(element, index) {
@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Page loaded letter animation
   [...navElements].forEach(element => {
-    element.innerHTML = element.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    element.innerHTML =  element.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     [...element.children].forEach((el, index) => {
       animateNav(el, index);
