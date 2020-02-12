@@ -1,9 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  // NAVIGATION ANIMATIONS
   const navElements = document.querySelectorAll('.main_nav_link');
 
-  // Navigation animation function
   function animateNav(element, index) {
     element.animate([{
         transform: 'translateY(-50px)',
@@ -25,7 +23,6 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   }
 
-  // Navigation hover animation function
   function animateNavHover(element, index) {
     element.animate([{
         transform: 'translateY(0px)'
@@ -43,16 +40,14 @@ document.addEventListener("DOMContentLoaded", function () {
     })
   }
 
-  // Page loaded letter animation
   [...navElements].forEach(element => {
-    element.innerHTML =  element.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+    element.innerHTML = element.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
 
     [...element.children].forEach((el, index) => {
       animateNav(el, index);
     })
   });
 
-  // Hover navigation element animation
   setTimeout(function () {
     [...navElements].forEach((element) => element.addEventListener('mouseenter', () => {
       [...element.children].forEach((el, index) => {

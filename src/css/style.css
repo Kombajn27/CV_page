@@ -1,7 +1,6 @@
 /* ==== VARIABLES ==== */
 :root {
   --main-font: 'Roboto', sans-serif;
-  --bcg-color1: rgb(156, 150, 150);
   --bcg-color2: #55677c;
   --bcg-color2-light: #959db1;
   --bcg-color3: #aab9b9;
@@ -10,8 +9,6 @@
   --contrast-color-transp: rgba(255, 165, 0, 0.95);
   --main-light-color: rgb(255, 255, 255);
   --main-dark-color: rgb(20, 14, 34);
-
-  --large-screen: 1200px;
 }
 
 /* ==== KEY FRAMES ==== */
@@ -49,7 +46,7 @@ body {
   margin: 0 auto;
 }
 
-/* === HEADER === */
+/* === MAIN SECTIONS === */
 
 header {
   width: 100%;
@@ -60,29 +57,18 @@ header {
   height: auto;
 }
 
- /*  header:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-top: 100vh solid transparent;
-  border-left: 50vw solid var(--main-light-color);
-  opacity: 0.1;
-  z-index: -1;
+.portfolio,
+.contact,
+footer {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
-header:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-top: 100vh solid transparent;
-  border-right: 60vw solid var(--main-light-color);
-  opacity: 0.1;
-  z-index: -1;
-}  */
-
-.header_cnt {
+.header_cnt,
+.portfolio_cnt,
+.contact_cnt,
+.footer_cnt {
   margin: 0 auto;
   max-width: 1200px;
   font-size: 2rem;
@@ -120,7 +106,7 @@ nav {
   position: relative;
   letter-spacing: 1px;
   cursor: pointer;
-  transition: all 0.4s ease-in-out; 
+  transition: all 0.4s ease-in-out;
 }
 
 .main_nav_link {
@@ -226,41 +212,6 @@ nav {
 }
 
 /* === PORTFOLIO === */
-
-.portfolio {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  /* background-image: url('../img/background_tiny.png'); */
-}
-
-/*  .portfolio:before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  border-bottom: 120vh solid transparent;
-  border-left: 80vw solid var(--bcg-color2-light);
-  opacity: 0.1;
-  z-index: -1;
-}
-
-.portfolio:after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  border-bottom: 120vh solid transparent;
-  border-right: 60vw solid var(--bcg-color2);
-  opacity: 0.3;
-  z-index: -1;
-}  */
-
-.portfolio_cnt {
-  margin: 0 auto;
-  max-width: 1200px;
-  font-size: 2rem;
-}
 
 .portfolio_heading {
   display: flex;
@@ -404,6 +355,78 @@ nav {
   color: var(--main-light-color);
 }
 
+/* === CONTACT === */
+
+.contact_cnt {
+  flex-direction: column;
+  margin-top: 1.5em;
+  background: linear-gradient(90deg, var(--bcg-color3), var(--bcg-color2));
+  box-shadow: 0.1em 0.1em 0.25em var(--shadow-dark);
+  padding: 1em;
+  text-align: center;
+}
+
+.contact h4 {
+  margin: 0.5em 0;
+}
+
+.contact h4:after {
+  content: '';
+  width: 150px;
+  height: 3px;
+  background-color: var(--contrast-color);
+  display: block;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 40px;
+}
+
+.contact_desc {
+  font-size: 0.6em;
+  margin: 0.5em 0;
+}
+
+.contact_button {
+  margin: 1em 0;
+  background-color: var(--contrast-color);
+  padding: 0.5em 1em;
+  font-size: 0.6em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  font-weight: 700;
+}
+
+.contact_button:hover {
+  background-color: var(--main-dark-color);
+  color: var(--main-light-color);
+}
+
+.contact_button:active {
+  outline: none;
+  background-color: var(--bcg-color2);
+}
+
+.contact_button:focus {
+  outline: none;
+}
+
+.contact_email {
+  font-size: 0.75em;
+  display: none;
+}
+
+/* === FOOTER === */
+
+.footer_cnt {
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  text-align: center;
+  font-size: 0.8em;
+  font-weight: 700;
+}
+
 /* === Media queries === */
 
 @media screen and (max-width: 1250px) {
@@ -438,6 +461,10 @@ nav {
   .portfolio_project[data-display="true"] {
     grid-column: span 10;
     grid-row: span 8;
+  }
+
+  .contact_cnt {
+    width: 98%;
   }
 }
 
@@ -522,13 +549,15 @@ nav {
   .portfolio_type {
     min-width: 33.3%;
   }
-  
+
   .portfolio_type:nth-of-type(4),
   .portfolio_type:nth-of-type(5) {
     min-width: 50%;
   }
 
-
+  .contact_cnt {
+    font-size: 1.5rem;
+  }
 }
 
 @media screen and (max-width: 650px) {
@@ -545,7 +574,6 @@ nav {
     grid-row: span 8;
   }
 }
-
 
 @media screen and (max-width: 500px) {
   .header_cnt {

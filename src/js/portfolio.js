@@ -1,26 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const typeListElements = document.querySelectorAll('.portfolio_type');
   const projects = document.querySelectorAll('.portfolio_project');
 
-  
-  const showDisplay = function(array) {
-    array.forEach( item => item.dataset.display = "true")
+
+  const showDisplay = function (array) {
+    array.forEach(item => item.dataset.display = "true")
   }
 
-  const removeDisplay = function(array) {
-    array.forEach( item => item.dataset.display = "false")
+  const removeDisplay = function (array) {
+    array.forEach(item => item.dataset.display = "false")
   }
-  
-  const removeItems = function(array) {
-    array.forEach(item =>  {
+
+  const removeItems = function (array) {
+    array.forEach(item => {
       item.classList.remove('active');
     });
   };
 
-  const showItems = function(array) {
+  const showItems = function (array) {
     for (let i = 0; i < array.length; i += 1) {
-      (function(i) {
-        setTimeout(function() {
+      (function (i) {
+        setTimeout(function () {
           array[i].classList.add('active');
         }, 50 * i);
       })(i);

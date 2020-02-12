@@ -2,6 +2,7 @@ import './css/style.css';
 import './js/navigation';
 import './js/welcome';
 import './js/portfolio';
+import './js/contact';
 
 function importAll(r) {
   return r.keys().map(r);
