@@ -1,0 +1,14 @@
+@import 'mixin';
+
+.footer {
+  @include section;
+
+  &__cnt {
+    @include container(1200px, 2rem);
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 700;
+  }
+}

@@ -1,0 +1,21 @@
+@mixin container($width, $font-size) {
+  margin: 0 auto;
+  max-width: $width;
+  font-size: $font-size;
+}
+
+@mixin section {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+@mixin gridDisplaySmall {
+  grid-column: span 20;
+  grid-row: span 8;
+}
+
+@mixin gridDisplayVerySmall {
+  grid-column: span 20;
+  grid-row: span 7;
+}

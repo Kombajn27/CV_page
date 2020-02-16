@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
-  const typeListElements = document.querySelectorAll('.portfolio_type');
-  const projects = document.querySelectorAll('.portfolio_project');
+  const typeListElements = document.querySelectorAll('.headings__type');
+  const projects = document.querySelectorAll('.project');
 
 
   const showDisplay = function (array) {
@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const removeItems = function (array) {
     array.forEach(item => {
-      item.classList.remove('active');
+      item.classList.remove('project--active');
     });
   };
 
@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
     for (let i = 0; i < array.length; i += 1) {
       (function (i) {
         setTimeout(function () {
-          array[i].classList.add('active');
+          array[i].classList.add('project--active');
         }, 50 * i);
       })(i);
     }
@@ -38,10 +38,10 @@ document.addEventListener('DOMContentLoaded', function () {
       );
 
       [...typeListElements].forEach(typeElement => {
-        typeElement.classList.remove('type_active');
+        typeElement.classList.remove('headings__type--active');
       })
 
-      e.currentTarget.classList.add('type_active');
+      e.currentTarget.classList.add('headings__type--active');
 
       removeItems([...projects]);
       removeDisplay([...projects]);

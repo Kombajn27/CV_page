@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const button = document.querySelector('.contact_button');
-  const email = document.querySelector('.contact_email');
+  const button = document.querySelector('.contact__button');
+  const email = document.querySelector('.contact__email');
 
   button.addEventListener('click', e => {
     e.preventDefault;

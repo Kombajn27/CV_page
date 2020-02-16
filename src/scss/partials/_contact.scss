@@ -1,0 +1,76 @@
+@import 'variables';
+@import 'mixin';
+
+.contact {
+  @include section;
+
+  &__cnt {
+    @include container(1200px, 2rem);
+    flex-direction: column;
+    margin-top: 1.5em;
+    margin-bottom: 1em;
+    background: linear-gradient(90deg, $bcg-color3, $bcg-color2);
+    box-shadow: 0.1em 0.1em 0.25em $shadow-dark;
+    padding: 1em;
+    text-align: center;
+
+    @media screen and (max-width: 1250px) {
+      width: 98%;
+    }
+
+    @media screen and (max-width: 768px) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__heading {
+    margin: 0.5em 0;
+
+    &:after {
+      content: '';
+      width: 150px;
+      height: 3px;
+      background-color: $contrast-color;
+      display: block;
+      margin: 0 auto;
+      margin-top: 15px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__desc {
+    font-size: 0.6em;
+    margin: 0.5em 0;
+  }
+
+  &__button {
+    margin: 1em 0;
+    background-color: $contrast-color;
+    padding: 0.5em 1em;
+    font-size: 0.6em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    font-weight: 700;
+
+    &:hover {
+      background-color: $main-dark-color;
+      color: $main-light-color;
+    }
+
+    &:active {
+      outline: none;
+      background-color: $bcg-color2;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__email {
+    font-size: 0.75em;
+    display: none;
+  }
+}

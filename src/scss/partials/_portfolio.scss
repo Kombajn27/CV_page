@@ -1,0 +1,240 @@
+@import 'variables';
+@import 'mixin';
+@import 'keyframes';
+
+.portfolio {
+  @include section;
+
+  &__cnt {
+    @include container(1200px, 2rem);
+
+    @media screen and (max-width: 940px) {
+      font-size: 1.75rem;
+    }
+  }
+}
+
+.headings {
+  display: flex;
+  align-content: center;
+  font-size: 0.75em;
+
+  &__name {
+    flex: 1;
+    background-color: $shadow-dark;
+    padding: 0.5em 0.5em;
+    margin-bottom: 0.5em;
+    color: $main-light-color;
+
+    @media screen and (max-width: 1250px) {
+      display: none;
+    }
+  }
+
+  &__types {
+    background-color: $contrast-color;
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    flex: 5;
+    margin-bottom: 0.5em;
+    font-weight: 700;
+    position: relative;
+    z-index: 20;
+
+    @media screen and (max-width: 768px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__type {
+    text-align: center;
+    width: 20%;
+    padding: 0.5em 0.5em;
+
+    &:hover {
+      box-shadow: 0.1em 0.1em 0.25em $shadow-dark;
+      background-color: $bcg-color2;
+      color: $main-light-color;
+      cursor: pointer;
+    }
+
+    &--active {
+      background-color: $main-light-color;
+    }
+
+    @media screen and (max-width: 768px) {
+      min-width: 33.33%;
+
+      &:nth-of-type(4),
+      &:nth-of-type(5) {
+        min-width: 50%;
+      }
+    }
+  }
+}
+
+.projects {
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: repeat(auto-fill, 5%);
+  grid-auto-rows: 50px;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.project {
+  position: relative;
+  background-color: #ccc;
+  margin: 8px;
+  text-align: center;
+  display: none;
+  animation: fadein 0.3s ease-out;
+  overflow: hidden;
+  border: 4px solid $contrast-color;
+
+  &:hover {
+    filter: contrast(1.1);
+    border-color: $main-light-color;
+  }
+
+  &--active {
+    display: inherit;
+  }
+
+  &[data-size="long"] {
+    grid-column: span 6;
+    grid-row: span 16;
+
+    @media screen and (max-width: 1250px) {
+      grid-row: span 12;
+    }
+
+    @media screen and (max-width: 940px) {
+      grid-column: span 10;
+      grid-row: span 14;
+    }
+
+    @media screen and (max-width: 650px) {
+      @include gridDisplaySmall;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include gridDisplayVerySmall;
+    }
+  }
+
+  &[data-size="large"] {
+    grid-column: span 14;
+    grid-row: span 8;
+
+    @media screen and (max-width: 940px) {
+      grid-column: span 10;
+      grid-row: span 7;
+    }
+
+    @media screen and (max-width: 650px) {
+      @include gridDisplaySmall;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include gridDisplayVerySmall;
+    }
+  }
+
+  &[data-size="medium"] {
+    grid-column: span 8;
+    grid-row: span 8;
+
+    @media screen and (max-width: 940px) {
+      grid-column: span 10;
+      grid-row: span 7;
+    }
+
+    @media screen and (max-width: 650px) {
+      @include gridDisplaySmall;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include gridDisplayVerySmall;
+    }
+  }
+
+  &[data-size="small"] {
+    grid-column: span 6;
+    grid-row: span 4;
+
+    @media screen and (max-width: 940px) {
+      grid-column: span 10;
+      grid-row: span 7;
+    }
+
+    .project__desc-cnt {
+      font-size: 0.5em;
+      line-height: 1.2em;
+    }
+
+    @media screen and (max-width: 650px) {
+      @include gridDisplaySmall;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include gridDisplayVerySmall;
+    }
+  }
+
+  &[data-display="true"] {
+    grid-column: span 10;
+    grid-row: span 8;
+
+    .project__desc-cnt {
+      font-size: 0.6em;
+      line-height: 1.5em;
+    }
+
+    @media screen and (max-width: 650px) {
+      @include gridDisplaySmall;
+    }
+
+    @media screen and (max-width: 400px) {
+      @include gridDisplayVerySmall;
+    }
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__desc-cnt {
+    position: absolute;
+    bottom: 0px;
+    font-size: 0.6em;
+    line-height: 1.5em;
+    background-color: $contrast-color;
+    display: flex;
+    justify-content: space-between;
+    min-height: 4em;
+    width: 100%;
+    font-weight: 700;
+  }
+
+  &__desc {
+    flex: 8;
+    padding: 0 10px;
+    align-self: center;
+  }
+
+  &__link-repo {
+    flex: 1;
+    display: inline-block;
+    align-self: center;
+    font-size: 2em;
+    color: $shadow-dark;
+    padding: 5px;
+
+    &:hover {
+      color: $main-light-color;
+    }
+  }
+}

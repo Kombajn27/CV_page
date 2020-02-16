@@ -1,23 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
 
   // Welcome section - image rotation
-  const cube = document.querySelectorAll('.cube');
+  const cube = document.querySelectorAll('.welcome__cube');
   const positionArray = [50, 10, 20, 30, 0, 25, 60, 50, 5];
 
   [...cube].forEach((el, index) => {
-    el.children[0].style.backgroundImage = `url(../img/front${index}.jpg`;
+    el.children[0].style.backgroundImage = `url(./img/front${index}.jpg`;
     el.children[0].style.backgroundPosition = `center -${positionArray[index]}px`
     el.style.top = `${positionArray[index]}px`;
 
-    el.children[1].style.backgroundImage = `url(../img/left${index}.png`;
+    el.children[1].style.backgroundImage = `url(./img/left${index}.png`;
     el.children[1].style.backgroundPosition = `center -${positionArray[index]}px`
     el.style.top = `${positionArray[index]}px`;
 
-    el.children[2].style.backgroundImage = `url(../img/back${index}.jpg`;
+    el.children[2].style.backgroundImage = `url(./img/back${index}.jpg`;
     el.children[2].style.backgroundPosition = `center -${positionArray[index]}px`
     el.style.top = `${positionArray[index]}px`;
 
-    el.children[3].style.backgroundImage = `url(../img/right${index}.jpg`;
+    el.children[3].style.backgroundImage = `url(./img/right${index}.jpg`;
     el.children[3].style.backgroundPosition = `center -${positionArray[index]}px`
     el.style.top = `${positionArray[index]}px`;
   });
@@ -54,18 +54,17 @@ document.addEventListener("DOMContentLoaded", function () {
   [...cube].forEach((el, index) => animateCubeRotation(el, index));
 
   // Toggle information visibility
-  const welcomeDetails = document.querySelector('.welcome_info_details');
+  const welcomeDetails = document.querySelector('.welcome__details');
 
   const changeVisibility = function () {
-    let active = welcomeDetails.querySelector(":not(.invisible)");
-    [...welcomeDetails.children].forEach(el => el.classList.add('invisible'));
+    let active = welcomeDetails.querySelector(":not(.welcome__description--invisible)");
+    [...welcomeDetails.children].forEach(el => el.classList.add('welcome__description--invisible'));
     if (active.dataset.last === 'last') {
-      welcomeDetails.firstElementChild.classList.remove('invisible');
+      welcomeDetails.firstElementChild.classList.remove('welcome__description--invisible');
     } else {
-      active.nextElementSibling.classList.remove('invisible');
+      active.nextElementSibling.classList.remove('welcome__description--invisible');
     }
   }
 
   setInterval(changeVisibility, 7000);
-
 });

@@ -1,4 +1,4 @@
-import './css/style.css';
+import './scss/main.scss';
 import './js/navigation';
 import './js/welcome';
 import './js/portfolio';

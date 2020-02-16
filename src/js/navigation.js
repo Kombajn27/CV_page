@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  const navElements = document.querySelectorAll('.main_nav_link');
+  const navElements = document.querySelectorAll('.nav__link');
 
   function animateNav(element, index) {
     element.animate([{
@@ -55,5 +55,4 @@ document.addEventListener("DOMContentLoaded", function () {
       })
     }));
   }, 1000);
-
 });
