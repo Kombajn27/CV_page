@@ -9,8 +9,6 @@
 body {
   color: $main-dark-color;
   min-width: 320px;
-  background: linear-gradient(90deg, $bcg-color2, $bcg-color3);
-  min-height: 100vh;
   font-family: $main-font;
   max-width: 1400px;
   margin: 0 auto;
@@ -19,4 +17,8 @@ body {
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 40px;
+  background: linear-gradient(90deg, $bcg-color2, $bcg-color3);
+  @media screen and (max-width: 320px) {
+    width: 320px;
+  }
 }

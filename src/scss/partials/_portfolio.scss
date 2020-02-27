@@ -71,6 +71,10 @@
         min-width: 50%;
       }
     }
+
+    @media screen and (max-width: 400px) {
+      font-size: 0.75em;
+    }
   }
 }
 
