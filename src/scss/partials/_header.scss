@@ -184,6 +184,11 @@
   &__description {
     font-size: 0.8em;
 
+    @media screen and (max-width: 400px) {
+      margin-left: 20px;
+      margin-right: 20px;
+    }
+
     &--invisible {
       display: none;
     }
